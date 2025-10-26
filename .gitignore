@@ -1,0 +1,26 @@
+# Neovim swap, backup, and undo files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.undo
+
+# Plugin manager files (Lazy, Packer, etc.)
+plugin/packer_compiled.lua
+lazy-lock.json  # optional — include if you don’t want to share exact plugin versions
+
+# LSP / Mason / Treesitter cache
+.mason/
+.nvim/
+local/
+cache/
+tmp/
+session/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+

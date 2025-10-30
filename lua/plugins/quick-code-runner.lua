@@ -47,7 +47,11 @@ return {
 						"cd $dir &&",
 						"go run $fileName"
 					},
-					c = "cd $dir && gcc $fileName -o /tmp/$fileNameWithoutExt && /tmp/$fileNameWithoutExt",
+					c = {
+						"cd $dir &&",
+						-- compile and only run if compilation succeeds
+						"gcc $fileName -o /tmp/$fileNameWithoutExt && /tmp/$fileNameWithoutExt || echo 'Compilation failed!'"
+					},
 				},
 			})
 

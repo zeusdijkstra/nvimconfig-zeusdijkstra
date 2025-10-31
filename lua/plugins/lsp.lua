@@ -14,7 +14,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "vimls", "ts_ls", "pyright", "clangd" },
+			ensure_installed = { "lua_ls", "vimls", "ts_ls", "pyright", "clangd", "gopls" },
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
@@ -42,14 +42,7 @@ return {
 					},
 				},
 			})
-			-- Basic keymaps for LSP
-			-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover info" })
-			-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-			-- vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "List references" })
-			-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
-			-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
-			--
-			--
+
 			vim.api.nvim_create_autocmd('LspAttach', {
 				group = vim.api.nvim_create_augroup('my.lsp', {}),
 				callback = function(args)
